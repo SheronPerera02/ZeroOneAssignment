@@ -1,0 +1,28 @@
+.ViewRented {
+  height: calc(100vh);
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RentedRecordContainer {
+  width: 70%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.ListItem {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  button {
+    cursor: pointer;
+  }
+}

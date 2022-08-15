@@ -1,0 +1,48 @@
+.Backdrop {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.RentDvdPopup {
+  width: 400px;
+  height: 250px;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 150;
+  position: relative;
+
+  form {
+    width: max-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    width: 300px;
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 0 10px;
+  }
+
+  button {
+    cursor: pointer;
+    margin: 0 5px;
+  }
+}

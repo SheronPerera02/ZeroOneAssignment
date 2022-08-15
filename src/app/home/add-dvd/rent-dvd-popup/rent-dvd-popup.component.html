@@ -1,0 +1,13 @@
+<div class="Backdrop">
+  <div class="RentDvdPopup">
+    <form (ngSubmit)="submit()" [formGroup]="form">
+      <input placeholder="Customer Name" formControlName="customerName" />
+      <input placeholder="Mobile Number" formControlName="mobileNumber" />
+      <input placeholder="Nic" formControlName="nic" />
+      <div>
+        <button (click)="cancel()">Cancel</button>
+        <button>Rent</button>
+      </div>
+    </form>
+  </div>
+</div>

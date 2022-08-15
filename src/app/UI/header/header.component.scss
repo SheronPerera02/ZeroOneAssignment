@@ -1,0 +1,25 @@
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: #222831;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavLink {
+  background-color: #393e46;
+  text-decoration: none;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin: 0 10px;
+}
+
+.Active {
+  background-color: #00adb5;
+}

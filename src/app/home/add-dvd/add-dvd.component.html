@@ -1,0 +1,32 @@
+<div class="AddDvd">
+  <app-rent-dvd-popup
+    *ngIf="popupVisible"
+    (closePopup)="closePopup()"
+    [dvd]="selectedDvd"
+  ></app-rent-dvd-popup>
+  <form class="Form" (ngSubmit)="onSubmit()" [formGroup]="form">
+    <input placeholder="Movie Name" formControlName="movieName" />
+    <input placeholder="No of copies" formControlName="noOfCopies" />
+    <input placeholder="Year" formControlName="year" />
+    <input placeholder="Price" formControlName="price" />
+    <button type="submit">Save</button>
+  </form>
+  <div class="MovieListContainer">
+    <div class="ListItem">
+      <p>ID</p>
+      <p>Name</p>
+      <p>Copies</p>
+      <p>Year</p>
+      <p>Price</p>
+      <p>Rent</p>
+    </div>
+    <div class="ListItem" *ngFor="let dvd of dvds">
+      <p>{{ dvd.id }}</p>
+      <p>{{ dvd.movieName }}</p>
+      <p>{{ dvd.noOfCopies }}</p>
+      <p>{{ dvd.year }}</p>
+      <p>{{ dvd.price }}</p>
+      <button (click)="openPopup(dvd)">Rent</button>
+    </div>
+  </div>
+</div>

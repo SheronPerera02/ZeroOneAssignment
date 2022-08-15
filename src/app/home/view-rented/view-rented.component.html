@@ -1,0 +1,29 @@
+<div class="ViewRented">
+  <div class="RentedRecordContainer">
+    <div class="ListItem">
+      <p>ID</p>
+      <p>Dvd Id</p>
+      <p>Movie Name</p>
+      <p>Customer Name</p>
+      <p>Mobile Number</p>
+      <p>Nic</p>
+      <p>Status</p>
+      <p>Return</p>
+    </div>
+    <div class="ListItem" *ngFor="let record of rentedRecords">
+      <p>{{ record.id }}</p>
+      <p>{{ record.dvd.id }}</p>
+      <p>{{ record.dvd.movieName }}</p>
+      <p>{{ record.customerName }}</p>
+      <p>{{ record.mobileNumber }}</p>
+      <p>{{ record.nic }}</p>
+      <p>{{ record.status }}</p>
+      <button
+        [disabled]="record.status === 'Returned'"
+        (click)="returnDvd(record)"
+      >
+        Return
+      </button>
+    </div>
+  </div>
+</div>
